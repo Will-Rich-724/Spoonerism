@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button'
 
 
 const SpoonForm = (props) => {
@@ -116,8 +117,8 @@ const SpoonForm = (props) => {
                 <Form.Group>
                     <Form.Label>Last Name:</Form.Label>
                     <Form.Control type="text" onChange={e => setLastName(e.target.value)} />
-                    <Button onClick={e => spoonerize()}>Spoonerize Me!</Button>
                 </Form.Group>
+                <Button variant="primary" onClick={e => spoonerize()}>Spoonerize Me!</Button>
             </Form>
             <h3>{spoonName ? spoonName : null}</h3>
         </div>

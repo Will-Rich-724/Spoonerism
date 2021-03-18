@@ -1,13 +1,22 @@
 html {
   background-image: url(img/spoon.jpg);
   background-size: cover;
+  color: white;
 }
 
 .App {
   text-align: center;
-  /* display: flex;
+  display: flex;
   vertical-align: top;
-  justify-content: center; */
+  justify-content: center;
+}
+
+.body {
+  margin-top: 100px;
+  width: 50%;
+  background-color: rgba(48,49,51,.8);
+  border-radius: 25px;
+  padding : 25px;
 }
 
 .App-logo {
