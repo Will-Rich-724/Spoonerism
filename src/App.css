@@ -1,5 +1,13 @@
+html {
+  background-image: url(img/spoon.jpg);
+  background-size: cover;
+}
+
 .App {
   text-align: center;
+  /* display: flex;
+  vertical-align: top;
+  justify-content: center; */
 }
 
 .App-logo {
