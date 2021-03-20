@@ -12,13 +12,17 @@ const SpoonForm = (props) => {
         console.log(firstName);
         console.log(lastName)
 
-        const fnfl = firstName.charAt(0);
+        const fnamefletter = firstName.charAt(0);
+        const fnfl = fnamefletter.toUpperCase();
         console.log(fnfl)
-        const fnsl = firstName.charAt(1);
+        const fnamesletter = firstName.charAt(1);
+        const fnsl = fnamesletter.toUpperCase();
         console.log(fnsl)
-        const snfl = lastName.charAt(0);
+        const snamefletter = lastName.charAt(0);
+        const snfl = snamefletter.toUpperCase();
         console.log(snfl)
-        const snsl = lastName.charAt(1);
+        const snamesletter = lastName.charAt(1);
+        const snsl = snamesletter.toUpperCase();
         console.log(snsl)
 
         var fnflStatus = "constant"
@@ -33,7 +37,7 @@ const SpoonForm = (props) => {
             console.log("first name first letter is const");
             fnflStatus = "const";
         };
-        if (fnsl.includes("a") || fnsl.includes("e") || fnsl.includes("i") || fnsl.includes("o") || fnsl.includes("u")) {
+        if (fnsl.includes("A") || fnsl.includes("E") || fnsl.includes("I") || fnsl.includes("O") || fnsl.includes("U")) {
             console.log("first name second letter is vowel");
             fnslStatus = "vowel";
         } else {
@@ -47,7 +51,7 @@ const SpoonForm = (props) => {
             console.log("second name first letter is const");
             snflStatus = "const";
         };
-        if (snsl.includes("a") || snsl.includes("e") || snsl.includes("i") || snsl.includes("o") || snsl.includes("u")) {
+        if (snsl.includes("A") || snsl.includes("E") || snsl.includes("I") || snsl.includes("O") || snsl.includes("U")) {
             console.log("second name second letter is vowel");
             snslStatus = "vowel";
         } else {
@@ -104,18 +108,20 @@ const SpoonForm = (props) => {
             console.log("NUMBER 9")
         }
 
-        setSpoonName(fnameSpoonerized + " " + lnameSpoonerized)
+        var fspoon = fnameSpoonerized.toUpperCase()
+        var lspoon = lnameSpoonerized.toUpperCase()
+        setSpoonName(fspoon + " " + lspoon)
     }
 
     return (
         <div className="body">
             <Form>
                 <Form.Group>
-                    <Form.Label>First Name:</Form.Label>
+                    <Form.Label>First Name:   </Form.Label>
                     <Form.Control type="text" onChange={e => setFirstName(e.target.value)} />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Last Name:</Form.Label>
+                    <Form.Label>Last Name:   </Form.Label>
                     <Form.Control type="text" onChange={e => setLastName(e.target.value)} />
                 </Form.Group>
                 <Button variant="primary" onClick={e => spoonerize()}>Spoonerize Me!</Button>
